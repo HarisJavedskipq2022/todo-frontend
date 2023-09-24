@@ -4,6 +4,7 @@ const initialState = {
 	data: [],
 	isLoading: false,
 	error: null,
+	editingTodoId: null,
 };
 
 const todoSlice = createSlice({
@@ -45,6 +46,13 @@ const todoSlice = createSlice({
 			);
 			state.isLoading = false;
 		},
+		setEditingTodoId: (state, action) => {
+			state.editingTodoId = action.payload;
+		},
+
+		clearEditingTodoId: (state) => {
+			state.editingTodoId = null;
+		},
 	},
 });
 
@@ -55,6 +63,8 @@ export const {
 	addTodoSuccess,
 	updateTodoSuccess,
 	deleteTodoSuccess,
+	setEditingTodoId,
+	clearEditingTodoId,
 } = todoSlice.actions;
 
 export default todoSlice.reducer;

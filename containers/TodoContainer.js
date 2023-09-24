@@ -1,9 +1,8 @@
 import React, { useEffect, useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RingLoader } from "react-spinners";
-
 import TodoForm from "@/components/TodoForm";
-import TodoList from "@/components/TodoList";
+import TodoList from "@/components/Todolist";
 import * as todoApi from "../api/todos";
 import {
 	addTodoSuccess,

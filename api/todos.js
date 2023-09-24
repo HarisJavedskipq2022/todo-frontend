@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = `http://localhost:8000/api/v1`;
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const fetchTodos = async () => {
 	return await axios.get(`${BASE_URL}/todo`);
