@@ -1,4 +1,3 @@
-// TodoComponent.js
 import { useState, useCallback } from "react";
 import TodoEditForm from "./TodoEditForm";
 import TodoDisplay from "./TodoDisplay";
